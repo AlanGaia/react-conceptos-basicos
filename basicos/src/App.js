@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
+import Cart from "./components/Cart";
 
 //Main Function
 function App() {
@@ -35,9 +36,15 @@ function App() {
           product={product}
           products={products}
           cart={cart}
-          addProductToCart={setCartItems}
+          setCartItems={setCartItems}
         />
       ))}
+
+      {/* Cart Component */}
+      <Cart 
+        cart={cart}
+        setCartItems={setCartItems}
+        />
 
       {/* Footer component */}
       <Footer year={year} />
