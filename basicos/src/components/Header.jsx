@@ -1,8 +1,10 @@
 import React from 'react';
 
 function Header() {
+    const contentString = 'Texto de principal del header';
+    
     return (
-        <h1>H1 del header</h1>
+        <h1>{contentString}</h1>
     )
 }
 
