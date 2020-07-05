@@ -1,10 +1,10 @@
 import React from 'react';
 
 function Header() {
-    const contentString = 'Texto de principal del header';
-    
+    const mainTitle = 'Tienda Virtual';
+
     return (
-        <h1>{contentString}</h1>
+        <h1 className="header">{mainTitle}</h1>
     )
 }
 
