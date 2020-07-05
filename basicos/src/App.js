@@ -2,11 +2,14 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 function App() {
+
+ //obtener el año
+ const year = new Date().getFullYear(); 
   return (
     <>
-      <Header />
+      <Header title='Tienda virtual' />
 
-      <Footer />
+      <Footer year={year} />
     </>
   );
 }
