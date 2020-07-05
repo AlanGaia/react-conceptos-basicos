@@ -35,7 +35,7 @@ function App() {
           product={product}
           products={products}
           cart={cart}
-          addItemToCart={setCartItems}
+          addProductToCart={setCartItems}
         />
       ))}
 

@@ -1,13 +1,16 @@
 import React from 'react';
 
-const Product = ({product, cart , addItemToCart, products}) => {
+const Product = ({product, cart , addProductToCart, products}) => {
   // Product destructuring
   const {name, price, id} = product;
 
   //Add product to cart
   const selectProduct = (id) => {
     const product = products.filter(product => product.id === id)[0];
-    console.log(product);
+    addProductToCart([
+      ...cart,
+      product
+    ])
     
   }
   
