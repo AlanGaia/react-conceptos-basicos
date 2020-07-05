@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Component with Function Declaration (not best practice)
+
 function Header() {
     const mainTitle = 'Tienda Virtual';
 
