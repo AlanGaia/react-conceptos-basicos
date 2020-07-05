@@ -7,13 +7,17 @@ import Product from "./components/Product";
 //Main Function
 function App() {
 
-  //Get Product List
+  //state for Product List
   const [products, setProducts] = useState([
     { id: 1, name: "Shirt ReactJS", price: 50,},
     { id: 2, name: "NodeJS Pants", price: 40,},
     { id: 3, name: "Jacket JavaScript", price: 120,},
     { id: 4, name: "Shoes VueJS", price: 20,},
   ]);
+
+  //state for shopping cart
+  const [cart, setCartItems] = useState([]);
+
 
   //Get the actual year
   const year = new Date().getFullYear();
@@ -29,6 +33,9 @@ function App() {
         <Product
           key={product.id}
           product={product}
+          products={products}
+          cart={cart}
+          addItemToCart={setCartItems}
         />
       ))}
 

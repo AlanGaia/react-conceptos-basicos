@@ -1,12 +1,14 @@
 import React from 'react';
 
-const Product = ({product}) => {
+const Product = ({product, cart , addItemToCart, products}) => {
   // Product destructuring
   const {name, price, id} = product;
 
   //Add product to cart
-  const selectProduct = () => {
-    console.log('comprando....');
+  const selectProduct = (id) => {
+    const product = products.filter(product => product.id === id)[0];
+    console.log(product);
+    
   }
   
   return (
@@ -15,7 +17,7 @@ const Product = ({product}) => {
       <p>${price}</p>
       <button 
         type='button' 
-        onClick={() => selectProduct() }
+        onClick={() => selectProduct(id) }
         >Agregar al Carrito
       </button>
     </div> 
