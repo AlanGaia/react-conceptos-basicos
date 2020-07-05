@@ -1,7 +1,12 @@
+//Imports components
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Product from "./components/Product";
+
+//Main Function
 function App() {
+
   //Get Product List
   const [products, setProducts] = useState([
     { id: 1, name: "Shirt ReactJS", price: 50,},
@@ -16,7 +21,13 @@ function App() {
   return (
     <>
       <Header title="Tienda virtual" />
-
+      <h1>Lista de productos</h1>
+      {products.map(product => (
+        <Product
+          key={product.id}
+          product={product}
+        />
+      ))}
       <Footer year={year} />
     </>
   );
