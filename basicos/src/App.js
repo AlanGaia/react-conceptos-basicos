@@ -20,14 +20,19 @@ function App() {
 
   return (
     <>
+      {/* Header component  */}
       <Header title="Tienda virtual" />
-      <h1>Lista de productos</h1>
+      
+      {/* Product List */}
+      <h2>Lista de productos</h2>
       {products.map(product => (
         <Product
           key={product.id}
           product={product}
         />
       ))}
+
+      {/* Footer component */}
       <Footer year={year} />
     </>
   );
